@@ -105,3 +105,33 @@ func TestLinkedList_Prepend(t *testing.T) {
 		t.Errorf("Expected list head's next node value to be '%d', but got '%d'", existingValue, l.head.next.val)
 	}
 }
+
+func TestLinkedList_Append(t *testing.T) {
+	l := &LinkedList{}
+
+	veryCoolValue := 420
+	l.Append(veryCoolValue)
+
+	if l.head == nil {
+		t.Errorf("Expected list head to be non-nil after prepend")
+	}
+	if l.head.val != veryCoolValue {
+		t.Errorf("Expected list head value to be '%d', but got '%d'", veryCoolValue, l.head.val)
+	}
+
+	// you might have realized I'm just copy & pasting most of the stuff. This is why it's boring. But it looks good on my github
+	// like any one reads this crap.
+
+	anotherFancyValue := 1337
+	l.Append(anotherFancyValue)
+	current := l.head
+	for current.next != nil {
+		current = current.next
+	}
+
+	if current.val != anotherFancyValue {
+		t.Errorf("Expected last node value to be '%d', but got '%d'", anotherFancyValue, current.val)
+	} else if current.next != nil {
+		t.Errorf("Expected last node's next pointer to be nil, but got non-nil")
+	}
+}
