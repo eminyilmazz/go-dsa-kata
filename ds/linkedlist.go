@@ -32,7 +32,7 @@ func (l *LinkedList) Length() uint {
 		current = current.next
 		length++
 	}
-	return length
+	return length + 1
 }
 
 func (l *LinkedList) Search(needle interface{}) int {
