@@ -97,11 +97,19 @@ func (l *LinkedList) removeTail() error {
 	if l.head == nil {
 		return errors.New("empty linked list")
 	}
+
 	current := l.head
 	var prev *Node
 	for current.next != nil {
 		prev = current
 		current = current.next
+	}
+
+	// this means it never went into the for loop and those this is a single node linked list
+	// thus, releasing the head
+	if prev == nil {
+		l.head = nil
+		return nil
 	}
 	prev.next = nil
 	return nil
