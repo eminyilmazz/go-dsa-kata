@@ -31,3 +31,24 @@ func TestLinkedList_Get(t *testing.T) {
 		t.Errorf("Expected error '%s', but got: '%s'", expectedError, err)
 	}
 }
+
+func TestLinkedList_Length(t *testing.T) {
+	list := &LinkedList{}
+	expected := uint(0)
+	actual := list.Length()
+
+	if actual != expected {
+		t.Errorf("Expected length %d, but got %d", expected, actual)
+	}
+
+	list.Append(1)
+	list.Append(420)
+	list.Append(1337)
+
+	expected = uint(3)
+	actual = list.Length()
+
+	if actual != expected {
+		t.Errorf("Expected length %d, but got %d", expected, actual)
+	}
+}
