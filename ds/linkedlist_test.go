@@ -135,3 +135,47 @@ func TestLinkedList_Append(t *testing.T) {
 		t.Errorf("Expected last node's next pointer to be nil, but got non-nil")
 	}
 }
+
+func TestLinkedList_InsertAt(t *testing.T) {
+	// Create an empty linked list
+	list := &LinkedList{}
+
+	// Test inserting at index 0 in an empty list
+	value := 420
+	err := list.InsertAt(0, value)
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+	if list.head == nil {
+		t.Errorf("Expected list head to be non-nil after insert")
+	} else if list.head.val != value {
+		t.Errorf("Expected list head value to be '%d', but got '%d'", value, list.head.val)
+	}
+
+	// Test inserting at index 0 in a non-empty list
+	existingValue := list.head.val
+	value = 1337
+	err = list.InsertAt(0, value)
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+	if list.head == nil {
+		t.Errorf("Expected list head to be non-nil after insert")
+	} else if list.head.val != value {
+		t.Errorf("Expected list head value to be '%d', but got '%d'", value, list.head.val)
+	} else if list.head.next == nil {
+		t.Errorf("Expected list head's next node to be non-nil after insert")
+	} else if list.head.next.val != existingValue {
+		t.Errorf("Expected list head's next node value to be '%d', but got '%d'", existingValue, list.head.next.val)
+	}
+
+	// Test inserting at an invalid index
+	invalidIndex := uint(5)
+	err = list.InsertAt(invalidIndex, 6969)
+	expectedError := errors.New("index out of bounds")
+	if err == nil {
+		t.Errorf("Expected error for index %d, but got no error", invalidIndex)
+	} else if err.Error() != expectedError.Error() {
+		t.Errorf("Expected error '%s', but got: '%s'", expectedError, err)
+	}
+}
