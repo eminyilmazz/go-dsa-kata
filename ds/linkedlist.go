@@ -42,6 +42,7 @@ func (l *LinkedList) Search(needle interface{}) int {
 		if current.val == needle {
 			return i
 		}
+		i++
 		current = current.next
 	}
 	return -1
