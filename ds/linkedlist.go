@@ -78,6 +78,12 @@ func (l *LinkedList) InsertAt(idx uint, val interface{}) error {
 		return errors.New("index out of bounds")
 	}
 	node := &Node{val: val, next: nil}
+
+	if idx == 0 {
+		l.Prepend(val)
+		return nil
+	}
+
 	current := l.head
 	for i := 0; i < int(idx); i++ {
 		current = current.next
