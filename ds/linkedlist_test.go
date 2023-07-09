@@ -81,3 +81,27 @@ func TestLinkedList_Search(t *testing.T) {
 		t.Errorf("Expected index %d, but got %d", expected, actual)
 	}
 }
+
+func TestLinkedList_Prepend(t *testing.T) {
+	l := &LinkedList{}
+	v := 1
+	l.Prepend(v)
+	if l.head == nil {
+		t.Errorf("Expected list head to be non-nil after prepend")
+	}
+	if l.head.val != v {
+		t.Errorf("Expected list head value to be '%d', but got '%d'", v, l.head.val)
+	}
+
+	// Okay to be fair, unit tests can get really boring very fast. You're witnessing one.
+	existingValue := l.head.val
+	v = 420
+	l.Prepend(v)
+	if l.head == nil {
+		t.Errorf("Expected list head to be non-nil after prepend")
+	} else if l.head.val != v {
+		t.Errorf("Expected list head value to be '%d', but got '%d'", v, l.head.val)
+	} else if l.head.next.val != existingValue {
+		t.Errorf("Expected list head's next node value to be '%d', but got '%d'", existingValue, l.head.next.val)
+	}
+}

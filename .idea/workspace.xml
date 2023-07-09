@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="fix: length should return incremented value of the last index">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: linkedlist search(), phew">
       <change beforePath="$PROJECT_DIR$/ds/linkedlist_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/ds/linkedlist_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688935465981</updated>
-      <workItem from="1688935466713" duration="1472000" />
+      <workItem from="1688935466713" duration="1878000" />
     </task>
     <task id="LOCAL-00001" summary="linked list implementation">
       <created>1688935610738</created>
@@ -137,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688936247300</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: I forgot to increment i oopsiees sorry pappa">
+      <created>1688937120179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688937120179</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test: linkedlist search(), phew">
+      <created>1688937156591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688937156591</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +161,9 @@
     <MESSAGE value="linked list Get() tests" />
     <MESSAGE value="linked list Length() tests" />
     <MESSAGE value="fix: length should return incremented value of the last index" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: length should return incremented value of the last index" />
+    <MESSAGE value="fix: I forgot to increment i oopsiees sorry pappa" />
+    <MESSAGE value="test: linkedlist search(), phew" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: linkedlist search(), phew" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
