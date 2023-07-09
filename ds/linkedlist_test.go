@@ -176,3 +176,54 @@ func TestLinkedList_InsertAt(t *testing.T) {
 		t.Errorf("Expected error '%s', but got: '%s'", expectedError, err)
 	}
 }
+
+func TestLinkedList_RemoveTail(t *testing.T) {
+	l := &LinkedList{}
+
+	err := l.removeTail()
+	expectedError := errors.New("empty linked list")
+	if err == nil {
+		t.Errorf("Expected error '%s', but got no error", expectedError)
+	} else if err.Error() != expectedError.Error() {
+		t.Errorf("Expected error '%s', but got: '%s'", expectedError, err)
+	}
+
+	l.Append(1)
+	l.Append(420)
+	l.Append(1337)
+
+	err = l.removeTail()
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+
+	current := l.head
+	for current.next != nil {
+		current = current.next
+	}
+	if current.val != 420 {
+		t.Errorf("Expected new tail value to be '420', but got '%d'", current.val)
+	}
+
+	err = l.removeTail()
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+
+	current = l.head
+	for current.next != nil {
+		current = current.next
+	}
+	if current.val != 1 {
+		t.Errorf("Expected new tail value to be '1', but got '%d'", current.val)
+	}
+
+	err = l.removeTail()
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+	// Verify the list becomes empty
+	if l.head != nil {
+		t.Errorf("Expected list head to be nil after removing tail, but got non-nil")
+	}
+}
