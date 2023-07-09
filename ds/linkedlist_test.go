@@ -140,7 +140,6 @@ func TestLinkedList_InsertAt(t *testing.T) {
 	// Create an empty linked list
 	list := &LinkedList{}
 
-	// Test inserting at index 0 in an empty list
 	value := 420
 	err := list.InsertAt(0, value)
 	if err != nil {
@@ -152,7 +151,6 @@ func TestLinkedList_InsertAt(t *testing.T) {
 		t.Errorf("Expected list head value to be '%d', but got '%d'", value, list.head.val)
 	}
 
-	// Test inserting at index 0 in a non-empty list
 	existingValue := list.head.val
 	value = 1337
 	err = list.InsertAt(0, value)
@@ -169,7 +167,6 @@ func TestLinkedList_InsertAt(t *testing.T) {
 		t.Errorf("Expected list head's next node value to be '%d', but got '%d'", existingValue, list.head.next.val)
 	}
 
-	// Test inserting at an invalid index
 	invalidIndex := uint(5)
 	err = list.InsertAt(invalidIndex, 6969)
 	expectedError := errors.New("index out of bounds")
