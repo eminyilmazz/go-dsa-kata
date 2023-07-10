@@ -227,3 +227,54 @@ func TestLinkedList_RemoveTail(t *testing.T) {
 		t.Errorf("Expected list head to be nil after removing tail, but got non-nil")
 	}
 }
+
+func TestLinkedList_RemoveHead(t *testing.T) {
+	l := &LinkedList{}
+
+	err := l.removeHead()
+	expectedError := errors.New("empty linked list")
+	if err == nil {
+		t.Errorf("Expected error '%s', but got no error", expectedError)
+	} else if err.Error() != expectedError.Error() {
+		t.Errorf("Expected error '%s', but got: '%s'", expectedError, err)
+	}
+
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+
+	err = l.removeHead()
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+
+	if l.head == nil {
+		t.Errorf("Expected list head to be non-nil after removeHead")
+	}
+
+	if l.head.val != 2 {
+		t.Errorf("Expected new head value to be '2', but got '%d'", l.head.val)
+	}
+
+	err = l.removeHead()
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+
+	if l.head == nil {
+		t.Errorf("Expected list head to be non-nil after removeHead")
+	}
+
+	if l.head.val != 3 {
+		t.Errorf("Expected new tail value to be '3', but got '%d'", l.head.val)
+	}
+
+	err = l.removeHead()
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+
+	if l.head != nil {
+		t.Errorf("Expected list head to be nil after removing head, but got non-nil")
+	}
+}

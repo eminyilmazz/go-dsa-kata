@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: linkedlist insertAt(). alright I admit it, I use a lot of googling for this. I just can't.">
-      <change beforePath="$PROJECT_DIR$/ds/linkedlist_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/ds/linkedlist_test.go" afterDir="false" />
+    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
       <recent name="C:\Users\Emin\Desktop\golang\go-dsa-kata\ds" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestLinkedList_InsertAt in go-dsa-kata/ds">
+  <component name="RunManager" selected="Go Test.TestLinkedList_RemoveTail in go-dsa-kata/ds">
     <configuration name="TestLinkedList_Append in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-dsa-kata" />
       <working_directory value="$PROJECT_DIR$/ds" />
@@ -78,18 +78,6 @@
       <pattern value="^\QTestLinkedList_InsertAt\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLinkedList_Length in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-dsa-kata" />
-      <working_directory value="$PROJECT_DIR$/ds" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go-dsa-kata/ds" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLinkedList_Length\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestLinkedList_Prepend in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-dsa-kata" />
       <working_directory value="$PROJECT_DIR$/ds" />
@@ -100,6 +88,18 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestLinkedList_Prepend\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLinkedList_RemoveTail in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-dsa-kata" />
+      <working_directory value="$PROJECT_DIR$/ds" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go-dsa-kata/ds" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestLinkedList_RemoveTail\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestLinkedList_Search in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestLinkedList_RemoveTail in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_InsertAt in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_Append in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_Prepend in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_Search in go-dsa-kata/ds" />
-        <item itemvalue="Go Test.TestLinkedList_Length in go-dsa-kata/ds" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688935465981</updated>
-      <workItem from="1688935466713" duration="3386000" />
+      <workItem from="1688935466713" duration="4712000" />
     </task>
     <task id="LOCAL-00001" summary="linked list implementation">
       <created>1688935610738</created>
@@ -218,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688938684026</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix: when the linked list is single node, theere was an error when trying to access a nil pointer.">
+      <created>1688939483003</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688939483003</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome.">
+      <created>1688939547704</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688939547704</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,9 +249,22 @@
     <MESSAGE value="test: linkedlist append(), i wish there was another way. I previously found some bugs so that's the only thing that motivates me." />
     <MESSAGE value="fix: okay maybe I might have done this? I'm too drunk to figure out if there's a flaw in the logic overall." />
     <MESSAGE value="test: linkedlist insertAt(). alright I admit it, I use a lot of googling for this. I just can't." />
-    <option name="LAST_COMMIT_MESSAGE" value="test: linkedlist insertAt(). alright I admit it, I use a lot of googling for this. I just can't." />
+    <MESSAGE value="fix: when the linked list is single node, theere was an error when trying to access a nil pointer." />
+    <MESSAGE value="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome." />
+    <option name="LAST_COMMIT_MESSAGE" value="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/ds/linkedlist_test.go</url>
+          <line>179</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
