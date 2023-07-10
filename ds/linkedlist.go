@@ -124,7 +124,7 @@ func (l *LinkedList) removeHead() error {
 }
 
 func (l *LinkedList) removeAt(idx uint) error {
-	if idx > l.Length() {
+	if idx >= l.Length() {
 		return errors.New("index out of bounds")
 	}
 
