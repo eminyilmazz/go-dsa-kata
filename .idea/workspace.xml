@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="impl: implemented queue">
-      <change afterPath="$PROJECT_DIR$/ds/queue_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: queue tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,19 +52,7 @@
       <recent name="C:\Users\Emin\Desktop\golang\go-dsa-kata\ds" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestQueue_Enqueue in go-dsa-kata/ds">
-    <configuration name="TestLinkedList_RemoveAt in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-dsa-kata" />
-      <working_directory value="$PROJECT_DIR$/ds" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go-dsa-kata/ds" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLinkedList_RemoveAt\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.queue_test.go">
     <configuration name="TestQueue_Dequeue in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-dsa-kata" />
       <working_directory value="$PROJECT_DIR$/ds" />
@@ -116,13 +101,24 @@
       <pattern value="^\QTestQueue_Size\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="queue_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-dsa-kata" />
+      <working_directory value="$PROJECT_DIR$/ds" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="go-dsa-kata" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/ds/queue_test.go" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestQueue_Enqueue in go-dsa-kata/ds" />
+        <item itemvalue="Go Test.queue_test.go" />
         <item itemvalue="Go Test.TestQueue_Dequeue in go-dsa-kata/ds" />
+        <item itemvalue="Go Test.TestQueue_Enqueue in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestQueue_Size in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestQueue_IsEmpty in go-dsa-kata/ds" />
-        <item itemvalue="Go Test.TestLinkedList_RemoveAt in go-dsa-kata/ds" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688935465981</updated>
-      <workItem from="1688935466713" duration="8452000" />
+      <workItem from="1688935466713" duration="8768000" />
     </task>
     <task id="LOCAL-00001" summary="linked list implementation">
       <created>1688935610738</created>
@@ -262,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689013774611</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="test: queue tests">
+      <created>1689015503415</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689015503415</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +288,8 @@
     <MESSAGE value="fix: nil pointer when empty linked list and idx is 0." />
     <MESSAGE value="test: linkedlist removeAt. phew, finally over." />
     <MESSAGE value="impl: implemented queue" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl: implemented queue" />
+    <MESSAGE value="test: queue tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: queue tests" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

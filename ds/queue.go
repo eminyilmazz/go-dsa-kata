@@ -12,6 +12,13 @@ func (q *Queue) IsEmpty() bool {
 	return q.Size() == 0
 }
 
+func (q *Queue) Peek() interface{} {
+	if q.Size() == 0 {
+		return nil
+	}
+	return q.elements[0]
+}
+
 func (q *Queue) Enqueue(vars ...interface{}) {
 	q.elements = append(q.elements, vars...)
 }
