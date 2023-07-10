@@ -1,6 +1,7 @@
 package ds
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -167,6 +168,42 @@ func TestQueue_Size(t *testing.T) {
 			}
 			if got := q.Size(); got != tt.want {
 				t.Errorf("Size() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestQueue_Peek(t *testing.T) {
+	type fields struct {
+		elements []interface{}
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		want   interface{}
+	}{
+		{
+			name: "Queue size 0",
+			fields: fields{
+				elements: []interface{}{},
+			},
+			want: nil,
+		},
+		{
+			name: "Queue size 3",
+			fields: fields{
+				elements: []interface{}{10, "Hello", 3.14},
+			},
+			want: 10,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			q := &Queue{
+				elements: tt.fields.elements,
+			}
+			if got := q.Peek(); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("Peek() = %v, want %v", got, tt.want)
 			}
 		})
 	}
