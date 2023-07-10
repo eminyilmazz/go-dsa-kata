@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome.">
+    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: linkedlist removeAt. phew, finally over.">
+      <change afterPath="$PROJECT_DIR$/ds/queue.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,7 +55,7 @@
       <recent name="C:\Users\Emin\Desktop\golang\go-dsa-kata\ds" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestLinkedList_RemoveTail in go-dsa-kata/ds">
+  <component name="RunManager" selected="Go Test.TestLinkedList_RemoveAt in go-dsa-kata/ds">
     <configuration name="TestLinkedList_Append in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-dsa-kata" />
       <working_directory value="$PROJECT_DIR$/ds" />
@@ -78,7 +80,7 @@
       <pattern value="^\QTestLinkedList_InsertAt\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLinkedList_Prepend in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLinkedList_RemoveAt in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-dsa-kata" />
       <working_directory value="$PROJECT_DIR$/ds" />
       <root_directory value="$PROJECT_DIR$" />
@@ -87,7 +89,19 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestLinkedList_Prepend\E$" />
+      <pattern value="^\QTestLinkedList_RemoveAt\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLinkedList_RemoveHead in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-dsa-kata" />
+      <working_directory value="$PROJECT_DIR$/ds" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go-dsa-kata/ds" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestLinkedList_RemoveHead\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestLinkedList_RemoveTail in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -102,25 +116,13 @@
       <pattern value="^\QTestLinkedList_RemoveTail\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLinkedList_Search in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-dsa-kata" />
-      <working_directory value="$PROJECT_DIR$/ds" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go-dsa-kata/ds" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLinkedList_Search\E$" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestLinkedList_RemoveAt in go-dsa-kata/ds" />
+        <item itemvalue="Go Test.TestLinkedList_RemoveHead in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_RemoveTail in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_InsertAt in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestLinkedList_Append in go-dsa-kata/ds" />
-        <item itemvalue="Go Test.TestLinkedList_Prepend in go-dsa-kata/ds" />
-        <item itemvalue="Go Test.TestLinkedList_Search in go-dsa-kata/ds" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688935465981</updated>
-      <workItem from="1688935466713" duration="4712000" />
+      <workItem from="1688935466713" duration="6977000" />
     </task>
     <task id="LOCAL-00001" summary="linked list implementation">
       <created>1688935610738</created>
@@ -232,7 +234,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688939547704</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test: linkedlist removeHead().">
+      <created>1689009172974</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689009172974</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: nil pointer when empty linked list and idx is 0.">
+      <created>1689009581082</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689009581082</updated>
+    </task>
+    <task id="LOCAL-00017" summary="test: linkedlist removeAt. phew, finally over.">
+      <created>1689010008023</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689010008023</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,20 +274,12 @@
     <MESSAGE value="test: linkedlist insertAt(). alright I admit it, I use a lot of googling for this. I just can't." />
     <MESSAGE value="fix: when the linked list is single node, theere was an error when trying to access a nil pointer." />
     <MESSAGE value="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome." />
-    <option name="LAST_COMMIT_MESSAGE" value="test: linkedlist removeTail(). I'm convinced that tests are not useless. I fixed so many bugs thanks to these. but still, writing them is cumbersome." />
+    <MESSAGE value="test: linkedlist removeHead()." />
+    <MESSAGE value="fix: nil pointer when empty linked list and idx is 0." />
+    <MESSAGE value="test: linkedlist removeAt. phew, finally over." />
+    <option name="LAST_COMMIT_MESSAGE" value="test: linkedlist removeAt. phew, finally over." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/ds/linkedlist_test.go</url>
-          <line>179</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
