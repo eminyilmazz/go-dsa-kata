@@ -278,3 +278,51 @@ func TestLinkedList_RemoveHead(t *testing.T) {
 		t.Errorf("Expected list head to be nil after removing head, but got non-nil")
 	}
 }
+
+func TestLinkedList_RemoveAt(t *testing.T) {
+	l := &LinkedList{}
+
+	err := l.removeAt(0)
+	expectedErr := errors.New("index out of bounds")
+
+	if err == nil {
+		t.Errorf("Expected error '%s' but got no error", expectedErr)
+	} else if err.Error() != expectedErr.Error() {
+		t.Errorf("Expected error '%s', but got: '%s'", expectedErr, err)
+	}
+
+	l.Prepend("up")
+	l.Prepend("whats")
+	l.Prepend("ayo")
+
+	err = l.removeAt(0)
+
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+
+	if l.head.val != "whats" {
+		t.Errorf("Expected new head value to be 'whats', but got '%s'", l.head.val)
+	}
+
+	l.Prepend("ayo")
+	err = l.removeAt(1)
+
+	if err != nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	}
+	if l.Length() != 2 {
+		t.Errorf("Expected list length to be 2 after removal, but got %d", l.Length())
+	}
+	if l.head.val != "ayo" {
+		t.Errorf("Expected head value to be 'ayo', but got '%s'", l.head.val)
+	}
+
+	err = l.removeAt(2) //out of bounds
+
+	if err == nil {
+		t.Errorf("Expected no error, but got: %v", err)
+	} else if err.Error() != expectedErr.Error() {
+		t.Errorf("Expected error '%s', but got: '%s'", expectedErr, err)
+	}
+}
