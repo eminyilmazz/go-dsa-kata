@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: stack tests. ILOVEGOLANG">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="impl: bubbbble sort">
+      <change afterPath="$PROJECT_DIR$/algo/sort/bubble_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688935465981</updated>
       <workItem from="1688935466713" duration="9129000" />
-      <workItem from="1689157111654" duration="2634000" />
+      <workItem from="1689157111654" duration="2963000" />
     </task>
     <task id="LOCAL-00001" summary="linked list implementation">
       <created>1688935610738</created>
@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689159114206</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="impl: bubbbble sort">
+      <created>1689218599158</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689218599158</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +358,8 @@
     <MESSAGE value="test: queue peek test" />
     <MESSAGE value="impl: stack implementation" />
     <MESSAGE value="test: stack tests. ILOVEGOLANG" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: stack tests. ILOVEGOLANG" />
+    <MESSAGE value="impl: bubbbble sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl: bubbbble sort" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
