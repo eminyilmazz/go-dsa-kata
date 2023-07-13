@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="impl: stack implementation">
-      <change afterPath="$PROJECT_DIR$/ds/stack_test.go" afterDir="false" />
+    <list default="true" id="2589a29e-c852-4683-ba04-abfaad1177b3" name="Changes" comment="test: stack tests. ILOVEGOLANG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,32 +29,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emin/Desktop/golang/go-dsa-kata/ds&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "C:/Users/Emin/Desktop/golang/go-dsa-kata/ds",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Emin\Desktop\golang\go-dsa-kata\ds" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestStack_IsEmpty in go-dsa-kata/ds">
+  <component name="RunManager" selected="Go Test.go test go-dsa-kata/ds">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go-dsa-kata" />
       <working_directory value="$PROJECT_DIR$" />
@@ -74,18 +76,6 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestStack_IsEmpty\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestStack_Peek in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-dsa-kata" />
-      <working_directory value="$PROJECT_DIR$/ds" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go-dsa-kata/ds" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestStack_Peek\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestStack_Pop in go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -133,13 +123,24 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="go test go-dsa-kata/ds" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-dsa-kata" />
+      <working_directory value="$PROJECT_DIR$/ds" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go-dsa-kata/ds" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestStack_IsEmpty in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestStack_Push in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestStack_Size in go-dsa-kata/ds" />
         <item itemvalue="Go Test.TestStack_Pop in go-dsa-kata/ds" />
-        <item itemvalue="Go Test.TestStack_Peek in go-dsa-kata/ds" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688935465981</updated>
       <workItem from="1688935466713" duration="9129000" />
-      <workItem from="1689157111654" duration="1593000" />
+      <workItem from="1689157111654" duration="2634000" />
     </task>
     <task id="LOCAL-00001" summary="linked list implementation">
       <created>1688935610738</created>
@@ -308,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689158108766</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="test: stack tests. ILOVEGOLANG">
+      <created>1689158923695</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689158923695</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test: stack tests. ILOVEGOLANG">
+      <created>1689159114206</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689159114206</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +350,8 @@
     <MESSAGE value="impl: oops forgot about peek" />
     <MESSAGE value="test: queue peek test" />
     <MESSAGE value="impl: stack implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl: stack implementation" />
+    <MESSAGE value="test: stack tests. ILOVEGOLANG" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: stack tests. ILOVEGOLANG" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
